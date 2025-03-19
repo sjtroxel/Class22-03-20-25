@@ -1,0 +1,13 @@
+<h3>Pre-Lesson Exercise 3</h3>
+<div>
+  @for (user of users(); track user.name) {
+    <div class="user-card">
+      <img [src]="user.avatar" alt="User Avatar">
+      <h4>{{ user.name }}</h4>
+      <p>Status: {{ user.status }}</p>
+      @if (user.status === 'Active') {
+        <button>Send Message</button>
+      }
+    </div>
+  }
+</div>
